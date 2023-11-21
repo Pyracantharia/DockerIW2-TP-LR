@@ -36,6 +36,7 @@ docker-compose logs -f
 ## DOCUMENTATION
 ### ARCHITECTURE
 #### TREE
+``````
 .
 ├── server
 │ ├── nginx1
@@ -47,6 +48,7 @@ docker-compose logs -f
 ├── docker-compose.yml
 ├── Dockerfile
 └── README.md
+``````
 #### DESCRIPTION
 - server : Contains the server configuration
 - www : Contains the application
