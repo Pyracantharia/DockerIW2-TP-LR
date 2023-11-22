@@ -1,5 +1,4 @@
 /.idea
 /.vscode
 /.DS_Store
-
-/www/public/vendor
+/.env
