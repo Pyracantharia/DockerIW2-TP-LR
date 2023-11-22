@@ -13,6 +13,8 @@ services:
   php:
     build: .
     container_name: php-container
+    environment:
+      SERVER: '1'
     volumes:
       - ./www/:/var/www/
     ports:
@@ -30,6 +32,8 @@ services:
   php2:
     build: .
     container_name: php2-container
+    environment:
+      SERVER: '2'
     volumes:
       - ./www/:/var/www/
     ports:

@@ -67,10 +67,10 @@
                         <div class="overlay" id="overlay"></div>
                         <div class="popup" id="popup">
                             <span class="close-btn" onclick="fermerPopup()">×</span>
-                            @if (env('NGINX_SERVER') === '1')
-                            <p>Serveur 1</p>
+                            @if (env('SERVER') === '1')
+                            <p>Serveur {{ env('SERVER') }}</p>
                             @else
-                            <p>Serveur 2</p>
+                            <p>Serveur {{ env('SERVER') }}</p>
                             @endif
                         </div>
 
