@@ -72,4 +72,6 @@ docker-compose logs -f
 - [x] Create the server configuration
 - [x] Clone the application
 - [x] Create the README.md
-- [0] Add the database and make all configurations
+- [x] Add the database and make all configurations
+- [x] Make buttons for each server
+- [0] Add the documentation

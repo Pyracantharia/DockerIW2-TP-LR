@@ -6,7 +6,6 @@ RUN apk --update add \
     unzip \
     nodejs \
     npm \
-    mysql-client \
     && rm -rf /var/cache/apk/*
 
 RUN docker-php-ext-configure zip && \
