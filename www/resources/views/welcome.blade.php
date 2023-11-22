@@ -18,6 +18,41 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+            /* Style pour la fenêtre modale */
+            .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            }
+
+            .popup {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 20px;
+                background-color: #f0f0f0; /* Couleur plus sobre pour le fond */
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                z-index: 1000;
+                text-align: center; /* Centrer le contenu */
+            }
+
+            .close-btn {
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 1rem;
+                color: #fff; /* Couleur blanche pour la croix */
+                background-color: red; /* Fond rouge pour la croix */
+                padding: 0px 6px;
+            }
         </style>
     </head>
     <body class="antialiased">
@@ -27,7 +62,19 @@
                     @auth
                         <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                        <a href="#" onclick="afficherPopup(event)" class="text-sm text-gray-700 dark:text-gray-500 underline">Server</a>
+                        <!-- Contenu du pop-up -->
+                        <div class="overlay" id="overlay"></div>
+                        <div class="popup" id="popup">
+                            <span class="close-btn" onclick="fermerPopup()">×</span>
+                            @if (env('NGINX_SERVER') === '1')
+                            <p>Serveur 1</p>
+                            @else
+                            <p>Serveur 2</p>
+                            @endif
+                        </div>
+
+                        <a href="{{ route('login') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
@@ -128,5 +175,19 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            // Fonction pour afficher le pop-up
+            function afficherPopup(event) {
+                event.preventDefault(); // Empêcher le comportement par défaut du lien
+                document.getElementById('overlay').style.display = 'block';
+                document.getElementById('popup').style.display = 'block';
+            }
+            function fermerPopup() {
+                document.getElementById('overlay').style.display = 'none';
+                document.getElementById('popup').style.display = 'none';
+            }
+        </script>
+
     </body>
 </html>
