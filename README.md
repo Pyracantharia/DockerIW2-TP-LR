@@ -3,6 +3,7 @@
 This is the final project for the Docker course. Random ipsum text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.
 ### CONTRIBUTORS
 - [Lucas RATIARAY](https://lucasratiaray.fr)
+- [Thibault PERROUAS](https://thibaultperrouas.fr)
 ## INSTALLATION
 ### REQUIREMENTS
 - Docker
