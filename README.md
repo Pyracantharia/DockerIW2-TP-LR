@@ -14,17 +14,6 @@ This is the final project for the Docker course. Random ipsum text. Lorem ipsum 
 ```bash
 docker-compose up -d
 ```
-
-#### Eventuel probleme ->
-Faire un :
-```bash
-docker-compose down 
-```
-Et refaire un 
-```bash
-docker-compose up -d 
-```
-
 3. Go to [localhost:8081](http://localhost:8081) for the first server.
 4. Go to [localhost:8082](http://localhost:8082) for the second server.
 5. Enjoy !
